@@ -1,0 +1,17 @@
+{
+  "info": {
+    "name": "ServerList",
+    "author": "Juergen Schwind",
+    "copyright": "JBS New Media GmbH",
+    "year": 2022,
+    "link": "https:\/\/jbs-newmedia.de",
+    "license": "MIT License",
+    "package": "jbspagetools.serverlist",
+    "version": "",
+    "release": "stable",
+    "group": "tool",
+    "unique": false,
+    "serverlist": "jbspage"
+  },
+  "required": []
+}
