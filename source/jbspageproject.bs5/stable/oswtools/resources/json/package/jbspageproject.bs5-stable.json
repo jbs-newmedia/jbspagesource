@@ -1,0 +1,23 @@
+{
+  "info": {
+    "name": "JBSPageProject:BS5",
+    "author": "Juergen Schwind",
+    "copyright": "JBS New Media GmbH",
+    "year": 2022,
+    "link": "https:\/\/jbs-newmedia.de",
+    "license": "MIT License",
+    "package": "jbspageproject.bs5",
+    "version": "",
+    "release": "stable",
+    "group": "project",
+    "unique": false,
+    "serverlist": "jbspage"
+  },
+  "required": [
+    {
+      "serverlist": "jbspage",
+      "package": "jbspage.core",
+      "release": "stable"
+    }
+  ]
+}
