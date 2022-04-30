@@ -9,7 +9,7 @@
     "package": "jbspageproject.u3",
     "version": "",
     "release": "stable",
-    "group": "tool",
+    "group": "project",
     "unique": false,
     "serverlist": "jbspage"
   },
