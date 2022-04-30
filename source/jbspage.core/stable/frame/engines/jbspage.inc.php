@@ -31,15 +31,6 @@ if (file_exists($file)) {
 }
 
 /**
- * Header
- */
-\osWFrame\Core\Network::sendHeader('Content-Type: text/html; charset=utf-8');
-$osW_Template->addVoidTag('base', ['href'=>\osWFrame\Core\Settings::getStringVar('project_domain_full')]);
-$osW_Template->addVoidTag('meta', ['charset'=>'utf-8']);
-$osW_Template->addVoidTag('meta', ['http-equiv'=>'X-UA-Compatible', 'content'=>'IE=edge']);
-$osW_Template->addVoidTag('meta', ['name'=>'viewport', 'content'=>'width=device-width, initial-scale=1, shrink-to-fit=no']);
-
-/**
  * Database
  */
 if (strlen(\osWFrame\Core\Settings::getStringVar('database_server')>0)) {
