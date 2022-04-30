@@ -1,0 +1,23 @@
+{
+  "info": {
+    "name": "JBSPage:Core",
+    "author": "Juergen Schwind",
+    "copyright": "JBS New Media GmbH",
+    "year": 2022,
+    "link": "https:\/\/jbs-newmedia.de",
+    "license": "MIT License",
+    "package": "jbspage.core",
+    "version": "",
+    "release": "stable",
+    "group": "core",
+    "unique": false,
+    "serverlist": "jbspage"
+  },
+  "required": [
+    {
+      "serverlist": "oswframe2k20",
+      "package": "oswframe.core",
+      "release": "stable"
+    }
+  ]
+}

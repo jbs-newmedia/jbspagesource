@@ -1,0 +1,11 @@
+{
+  "htaccess": {
+    "middle": [
+      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)?_([0-9]+)$ ?language=$1&module=jbspage&page=$2&&element_value=$3&&element_id=$4&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)$ ?language=$1&module=jbspage&page=$2&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-z]{2,3})/?$ ?language=$1&module=jbspage&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)?_([0-9]+)$ ?module=jbspage&page=$1&&element_value=$2&&element_id=$3&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-zA-Z0-9-_]+)$ ?module=jbspage&page=$1&%{QUERY_STRING} [L]"
+    ]
+  }
+}
