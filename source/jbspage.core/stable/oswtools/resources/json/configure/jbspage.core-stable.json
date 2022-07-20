@@ -1,11 +1,19 @@
 {
   "htaccess": {
-    "middle": [
-      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)?_([0-9]+)$ ?language=$1&module=jbspage&page=$2&&element_value=$3&&element_id=$4&%{QUERY_STRING} [L]",
-      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)$ ?language=$1&module=jbspage&page=$2&%{QUERY_STRING} [L]",
-      "RewriteRule ^([a-z]{2,3})/?$ ?language=$1&module=jbspage&%{QUERY_STRING} [L]",
-      "RewriteRule ^([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)?_([0-9]+)$ ?module=jbspage&page=$1&&element_value=$2&&element_id=$3&%{QUERY_STRING} [L]",
-      "RewriteRule ^([a-zA-Z0-9-_]+)$ ?module=jbspage&page=$1&%{QUERY_STRING} [L]"
+    "middlebottom": [
+      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)_([a-zA-Z0-9]+)/([a-zA-Z0-9-]+)_([a-zA-Z0-9]+)$ ?jbspage_language=$1&module=jbspage&jbspage_page=$2&jbspage_group_value=$3&jbspage_group_id=$4&jbspage_element_value=$5&jbspage_element_id=$6&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)_([a-zA-Z0-9]+)$ ?jbspage_language=$1&module=jbspage&jbspage_page=$2&jbspage_group_value=$3&jbspage_element_value=$4&jbspage_element_id=$5&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)$ ?jbspage_language=$1&module=jbspage&jbspage_page=$2&jbspage_group_value=$3&jbspage_element_value=$4&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)_([a-zA-Z0-9]+)$ ?jbspage_language=$1&module=jbspage&jbspage_page=$2&jbspage_element_value=$3&jbspage_element_id=$4&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)$ ?jbspage_language=$1&module=jbspage&jbspage_page=$2&jbspage_element_value=$3&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-z]{2,3})/([a-zA-Z0-9-_]+)$ ?jbspage_language=$1&module=jbspage&jbspage_page=$2&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-z]{2,3})/$ ?jbspage_language=$1&module=jbspage&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)_([a-zA-Z0-9]+)/([a-zA-Z0-9-]+)_([a-zA-Z0-9]+)$ ?module=jbspage&jbspage_page=$1&jbspage_group_value=$2&jbspage_group_id=$3&jbspage_element_value=$4&jbspage_element_id=$5&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)_([a-zA-Z0-9]+)$ ?module=jbspage&jbspage_page=$1&jbspage_group_value=$2&jbspage_element_value=$3&jbspage_element_id=$4&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)$ ?module=jbspage&jbspage_page=$1&jbspage_group_value=$2&jbspage_element_value=$3&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)_([a-zA-Z0-9]+)$ ?module=jbspage&jbspage_page=$1&jbspage_element_value=$2&jbspage_element_id=$3&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-zA-Z0-9-_]+)/([a-zA-Z0-9-]+)$ ?module=jbspage&jbspage_page=$1&jbspage_element_value=$2&%{QUERY_STRING} [L]",
+      "RewriteRule ^([a-zA-Z0-9-_]+)$ ?module=jbspage&jbspage_page=$1&%{QUERY_STRING} [L]"
     ]
   }
 }
