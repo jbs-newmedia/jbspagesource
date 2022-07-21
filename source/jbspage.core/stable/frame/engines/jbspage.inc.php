@@ -34,7 +34,7 @@ if (file_exists($file)) {
  * Database
  */
 if (strlen(\osWFrame\Core\Settings::getStringVar('database_server')>0)) {
-	\osWFrame\Core\DB::addConnectionMYSQL(\osWFrame\Core\Settings::getStringVar('database_server'), \osWFrame\Core\Settings::getStringVar('database_username'), \osWFrame\Core\Settings::getStringVar('database_password'), \osWFrame\Core\Settings::getStringVar('database_db'), \osWFrame\Core\Settings::getStringVar('database_port'));
+	\osWFrame\Core\DB::addConnectionMYSQL(\osWFrame\Core\Settings::getStringVar('database_server'), \osWFrame\Core\Settings::getStringVar('database_username'), \osWFrame\Core\Settings::getStringVar('database_password'), \osWFrame\Core\Settings::getStringVar('database_db'), \osWFrame\Core\Settings::getStringVar('database_character'), 'default', \osWFrame\Core\Settings::getIntVar('database_port'));
 	\osWFrame\Core\DB::connect();
 }
 
@@ -48,7 +48,7 @@ if (strlen(\osWFrame\Core\Settings::getStringVar('database_server')>0)) {
  */
 $language_available=\osWFrame\Core\Language::getAvailableLanguages();
 if ((\osWFrame\Core\Settings::getStringVar('jbspage_language_detect')==null)||(\osWFrame\Core\Settings::getStringVar('jbspage_language_detect')=='path')) {
-	$language=\osWFrame\Core\Settings::catchStringGetValue('language');
+	$language=\osWFrame\Core\Settings::catchStringGetValue('jbspage_language');
 	if (($language!=null)&&(isset($language_available[$language]))) {
 		\osWFrame\Core\Language::setCurrentLanguage($language_available[$language]);
 	}
@@ -63,7 +63,7 @@ if ((\osWFrame\Core\Settings::getStringVar('jbspage_language_detect')==null)||(\
 	}
 	\osWFrame\Core\Session::setStringVar('language', \osWFrame\Core\Language::getCurrentLanguage());
 
-	$language=\osWFrame\Core\Settings::catchStringValue('language');
+	$language=\osWFrame\Core\Settings::catchStringValue('jbspage_language');
 	if ($language!='') {
 		\osWFrame\Core\Language::setCurrentLanguage($language);
 		\osWFrame\Core\Session::setStringVar('language', \osWFrame\Core\Language::getCurrentLanguage());
@@ -84,7 +84,7 @@ if (file_exists($file)) {
 /**
  * Check page exists
  */
-$Navigation->setPage($Navigation->validatePage(\osWFrame\Core\Language::getNameModule(\osWFrame\Core\Settings::catchStringValue('page'))));
+$Navigation->setPage($Navigation->validatePage(\osWFrame\Core\Language::getNameModule(\osWFrame\Core\Settings::catchStringValue('jbspage_page'))));
 $file=\osWFrame\Core\Settings::getStringVar('settings_abspath').'modules'.DIRECTORY_SEPARATOR.\osWFrame\Core\Settings::getStringVar('frame_current_module').DIRECTORY_SEPARATOR.'php'.DIRECTORY_SEPARATOR.$Navigation->getPage().'.inc.php';
 if (\osWFrame\Core\Filesystem::existsFile($file)!==true) {
 	$Navigation->setPage('error');
